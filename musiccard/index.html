@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<style>
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.bigbox{
+				width: 800px;
+				height: 300px;
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				margin-left: -400px;
+				margin-top: -150px;
+				
+	
+			}
+			.wrapper {
+			
+				transform-style: preserve-3d;
+				perspective: 1500px;
+				/* border:1px solid black; */
+				height: 200px;
+			
+			}
+			
+			.wrapper img {
+				width: 100%;
+				height: 100%;
+				border-radius: 20px;
+			}
+			
+			.musiccard {
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -150px;
+				margin-top: -100px;
+				border-radius: 8px;
+				transition: transform 0.5s ease-in-out;
+				box-shadow: 0px 25px 35px 0px rgba(0, 0, 0, .5);
+				border-radius: 20px;
+			}
+			
+			.zhe {
+				width: 100%;
+				height: 100%;
+				border-radius: 20px;
+				background: rgba(48, 48, 48, .5);
+				position: absolute;
+			}
+			
+			#dian {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: rgba(48, 48, 48, .5);
+				top: 280px;
+    			left: 310px;
+			}
+			
+			#dian #one {
+				margin-top: 10px;
+				margin-left: 12px;
+			}
+			
+			#two {
+				margin-top: 10px;
+				margin-left: 10px;
+				display: none;
+			}
+			
+			.box {
+				position: absolute;
+				width: 200px;
+				height: 0px;
+				top: 360px;
+    			left: 240px;
+			}
+			
+			.tiao {
+				position: absolute;
+				width: 100%;
+				border-radius: 10px;
+				height: 10px;
+				background: #CCCCCC;
+			}
+			
+			.dian {
+				width: 15px;
+				height: 15px;
+				top: -2px;
+				border-radius: 50%;
+				background: black;
+				position: absolute;
+				cursor: pointer;
+				z-index: 2;
+			}
+			
+			.yanse {
+				background: greenyellow;
+				border-radius: 10px;
+				z-index: 1;
+				width: 15px;
+				height: 10px;
+				position: absolute;
+			}
+			p{
+				font-size: 12px;
+				text-align: center;
+				
+			}
+		</style>
+		<div class="bigbox">
+			<div class="wrapper" id="wrap">
+				<div class="musiccard musicbox">
+					<div class="zhe"><p>米津玄師 (よねづ けんし) - Lemon</p></div>
+					<audio src="mp3/米津玄師 (よねづ けんし) - Lemon.mp3"></audio>
+					<img src="img/444fc8a276e6846e82375d9d0a9e05a.png" alt="" />
+					
+				</div>
+				<div class="musiccard musicbox">
+					<div class="zhe"><p>杨宗纬 - 一次就好</p></div>
+					
+					<img src="img/3887dd468e33c4bb611a83d2895a55a.png" alt="" />
+					
+				</div>
+				<div class="musiccard musicbox">
+					<div class="zhe"><p>阿细 - 一双手</p></div>
+					
+					<img src="img/yishuangshou.png" alt="" />
+					
+				</div>
+			</div>
+
+			<div id="dian">
+				<svg id="two" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" t="1544709837145" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" p-id="848" width="30" height="30">
+					<defs>
+						<style type="text/css" />
+					</defs>
+					<path d="M349.866667 149.333333h-14.933334c-21.333333 0-36.266667 14.933333-36.266666 34.133334v654.933333c0 19.2 14.933333 34.133333 34.133333 34.133333h14.933333c19.2 0 34.133333-14.933333 34.133334-34.133333V183.466667c2.133333-19.2-12.8-34.133333-32-34.133334z m341.333333 0h-14.933333c-21.333333 0-36.266667 14.933333-36.266667 34.133334v654.933333c0 19.2 14.933333 34.133333 34.133333 34.133333h14.933334c19.2 0 34.133333-14.933333 34.133333-34.133333V183.466667c2.133333-19.2-12.8-34.133333-32-34.133334z" p-id="849" />
+				</svg>
+				<svg id="one" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" t="1544709833612" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" p-id="732" width="30" height="30">
+					<defs>
+						<style type="text/css" />
+					</defs>
+					<path d="M780.8 475.733333L285.866667 168.533333c-27.733333-17.066667-64 4.266667-64 36.266667v614.4c0 32 36.266667 53.333333 64 36.266667l492.8-307.2c29.866667-14.933333 29.866667-57.6 2.133333-72.533334z" p-id="733" />
+				</svg>
+			</div>
+			<div class="box">
+				<div class="tiao"></div>
+				<div class="dian"></div>
+				<div class="yanse"></div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		
+		var oImg = $('.musiccard');
+		var len = oImg.length;
+		var flag = true;
+		
+		//获取中间图片的索引
+		var nowIndex = 0;
+		var timer;
+		var wrap = $('.wrapper');
+		var time
+		//初始化函数
+		function init() {
+			carousel();
+			bindEvent();
+		}
+		init();
+
+		//图片展示
+		function carousel() {
+			var midLen = Math.floor(len / 2);
+			var lNum, rNum;
+			for(var i = 0; i < midLen; i++) {
+				lNum = nowIndex - i - 1;
+				oImg.eq(lNum).css({
+					transform: 'translateX(' + (-150 * (i + 1)) + 'px) translateZ(' + (200 - i * 100) + 'px)'
+				}).removeAttr('tab');
+				rNum = nowIndex + i + 1;
+				if(rNum > len - 1) {
+					rNum -= len;
+				}
+				oImg.eq(rNum).css({
+					transform: 'translateX(' + (150 * (i + 1)) + 'px) translateZ(' + (200 - i * 100) + 'px)'
+				}).removeAttr('tab');
+			};
+			oImg.eq(nowIndex).css({
+				transform: 'translateZ(300px)'
+			}).attr('tab', '1');
+			wrap.on('transitionend', function() {
+				flag = true;
+			})
+		}
+
+
+
+
+
+
+
+
+
+		function bindEvent() {
+			oImg.on('click', function(e) {
+
+//				if($(this).find('#music')[0].paused==true){
+//					$(this).find('#music')[0].play()
+//				}else{
+//					$(this).find('#music')[0].pause()
+//				}	
+				
+				
+				
+				
+//				
+				if(flag) {
+					var lateZ = $(this).css('transform').split(',')[14];
+					
+					console.log(lateZ)
+					if(lateZ == 300) {
+						
+						flag = true;
+					} else {
+						flag = false;
+						nowIndex = $(this).index();
+						moving(nowIndex);
+					}
+				}
+			})
+
+		}
+		
+		
+		$('.musicbox').on('click',function(){
+			
+			
+				
+			
+			if($(this).find('audio').length>0){
+				return
+			}else{
+				$('#two').css({
+					display:'block'
+				})
+				$('#one').css({
+					display:'none'
+				})
+				$('audio').remove()
+				$(this).append("<audio src='mp3/"+$(this).find('p').text()+".mp3'></audio>")
+				$('audio').trigger('play')
+				
+				
+//				clearInterval(time)
+//				time =setInterval(function(){
+//					console.log($('audio')[0].currentTime)
+//				},1000)
+			}
+				
+		})
+		
+		$("#one").on('click',function(){
+			$('audio').trigger('play')
+			$('#two').css({
+					display:'block'
+				})
+				$('#one').css({
+					display:'none'
+				})
+		
+
+				
+				clearInterval(time)
+				time =setInterval(function(){
+					
+					console.log(Math.round($('audio')[0].duration))
+					console.log(Math.round($('audio')[0].currentTime))
+					var weiyi = Math.round(Math.round($('audio')[0].currentTime)/Math.round($('audio')[0].duration)*200)
+					$('.dian').css({
+						left: weiyi + 'px'
+					})
+					$('.yanse').css({
+						width: weiyi + 15+ 'px'
+					})
+					if(Math.round($('audio')[0].currentTime)>=Math.round($('audio')[0].duration)){
+						clearInterval(time);
+					}
+					
+					
+				},1000);
+				
+				$('.tiao').on('click',function(ev){
+					var _event = ev;
+					$('.dian')[0].style.left =  _event.offsetX + 'px';
+					$('.yanse')[0].style.width =_event.offsetX +15 + 'px';
+					 
+					$('audio')[0].currentTime =Math.round(($('.dian')[0].offsetLeft/$('.tiao')[0].offsetWidth)*$('audio')[0].duration);
+				})
+				$('.yanse').on('click',function(ev){
+					var _event = ev;
+					$('.dian')[0].style.left =  _event.offsetX + 'px';
+					$('.yanse')[0].style.width =_event.offsetX +15 + 'px';
+					 
+					$('audio')[0].currentTime =Math.round(($('.dian')[0].offsetLeft/$('.tiao')[0].offsetWidth)*$('audio')[0].duration);
+				})
+				
+				
+				$('.dian').on('mousedown',function(ev){
+					var _event = ev;
+					$('.box').css({
+						height : 50 + 'px',
+					})
+					var dianleft = _event.clientX - this.offsetLeft;
+					document.onmousemove = function(ev){
+						 var _event=ev;
+						$('.dian')[0].style.left = _event.clientX - dianleft  + 'px';
+						$('.yanse')[0].style.width = _event.clientX - dianleft  + 'px'; 
+						if($('.dian')[0].offsetLeft<0){
+							$('.dian')[0].style.left = 0  + 'px';
+							$('.yanse')[0].style.width = 0  + 'px';
+						}else if($('.dian')[0].offsetLeft>$('.yanse')[0].offsetWidth){
+							$('.dian')[0].style.left = $('.tiao')[0].offsetWidth  + 'px';
+							$('.yanse')[0].style.width = $('.tiao')[0].offsetWidth  + 'px';
+						}
+						window.getSelection ? window.getSelection().removeAllRanges():document.selection.empty();
+					}
+				})
+				
+				$('.box').on('mouseup',function(){
+					$('.box')[0].style.height = 0 + 'px'
+					$('audio')[0].currentTime =Math.round(($('.dian')[0].offsetLeft/$('.tiao')[0].offsetWidth)*$('audio')[0].duration);
+					document.onmousemove = null
+				})
+				
+		})
+		$('#two').on('click',function(){
+			
+			
+			$('audio').trigger('pause')
+			$('#two').css({
+					display:'none'
+				})
+				$('#one').css({
+					display:'block'
+				})
+		})
+			
+		
+		
+
+		function moving(index) {
+			index = index < 0 ? len - 1 : index;
+			index = index > len - 1 ? 0 : index;
+			nowIndex = index;
+			nowIndex = index;
+			carousel();
+		}
+		
+		
+//		
+
+	</script>
+
+</html>
